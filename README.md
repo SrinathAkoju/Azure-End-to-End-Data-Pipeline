@@ -14,7 +14,7 @@ This project was created as part of my Azure learning journey while preparing fo
 
 ## 🏗 Architecture
 
-![Architecture Diagram](architecture/architecture-diagram.png)
+![Azure-End-to-End-Pipeline](Azure End to End architecture diagram.jpeg)
 
 ---
 
