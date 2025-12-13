@@ -14,7 +14,7 @@ This project was created as part of my Azure learning journey while preparing fo
 
 ## 🏗 Architecture
 
-[![Azure-End-to-End-Pipeline](architecture.jpeg)](architecture.jpeg)]
+[![Azure-End-to-End-Pipeline](architecture.jpeg)](architecture.jpeg)
 
 **This architecture follows the Azure Medallion pattern (Bronze → Silver → Gold) using ADF for ingestion, Databricks for transformation, and Power BI for reporting.**
 ---
