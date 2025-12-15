@@ -1,0 +1,57 @@
+[
+{
+    "P_relativeurl" : "anshlambaoldgit/Adventure-Works-Data-Engineering-Project/refs/heads/main/Data/AdventureWorks_Calendar.csv",
+    "p_sink_folder" : "calendar",
+    "p_file_name"  : "calendar.csv"
+},
+{
+    "P_relativeurl" : "anshlambaoldgit/Adventure-Works-Data-Engineering-Project/refs/heads/main/Data/AdventureWorks_Customers.csv",
+    "p_sink_folder" : "customers",
+    "p_file_name"  : "customers.csv"
+},
+{
+    "P_relativeurl" : "anshlambaoldgit/Adventure-Works-Data-Engineering-Project/refs/heads/main/Data/AdventureWorks_Product_Categories.csv",
+    "p_sink_folder" : "Product_Categories",
+    "p_file_name"  : "Product_Categories.csv"
+},
+{
+    "P_relativeurl" : "anshlambaoldgit/Adventure-Works-Data-Engineering-Project/refs/heads/main/Data/AdventureWorks_Product_Subcategories.csv",
+    "p_sink_folder" : "Product_Subcategories",
+    "p_file_name"  : "Product_Subcategories.csv"
+},
+{
+    "P_relativeurl" : "anshlambaoldgit/Adventure-Works-Data-Engineering-Project/refs/heads/main/Data/AdventureWorks_Products.csv",
+    "p_sink_folder" : "Products",
+    "p_file_name"  : "Products.csv"
+},
+{
+    "P_relativeurl" : "anshlambaoldgit/Adventure-Works-Data-Engineering-Project/refs/heads/main/Data/AdventureWorks_Returns.csv",
+    "p_sink_folder" : "Returns",
+    "p_file_name"  : "Returns.csv"
+},
+{
+    "P_relativeurl" : "anshlambaoldgit/Adventure-Works-Data-Engineering-Project/refs/heads/main/Data/AdventureWorks_Sales_2015.csv",
+    "p_sink_folder" : "Sales_2015",
+    "p_file_name"  : "Sales_2015.csv"
+},
+{
+    "P_relativeurl" : "anshlambaoldgit/Adventure-Works-Data-Engineering-Project/refs/heads/main/Data/AdventureWorks_Sales_2016.csv",
+    "p_sink_folder" : "Sales_2016",
+    "p_file_name"  : "Sales_2016.csv"
+},
+{
+    "P_relativeurl" : "anshlambaoldgit/Adventure-Works-Data-Engineering-Project/refs/heads/main/Data/AdventureWorks_Sales_2017.csv",
+    "p_sink_folder" : "Sales_2017",
+    "p_file_name"  : "Sales_2017.csv"
+},
+{
+    "P_relativeurl" : "anshlambaoldgit/Adventure-Works-Data-Engineering-Project/refs/heads/main/Data/AdventureWorks_Territories.csv",
+    "p_sink_folder" : "Territories",
+    "p_file_name"  : "Territories.csv"
+},
+]
+
+
+
+
+
