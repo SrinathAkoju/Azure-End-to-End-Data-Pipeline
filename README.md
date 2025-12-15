@@ -35,29 +35,32 @@ Pipelines are parameterized to handle multiple datasets
 
 Raw data is stored in Azure Data Lake Storage Gen2 (Bronze layer) without modification
 
+[![Azure-End-to-End-Pipeline](adf-pipeline-config.json)
+
 2️⃣ Data Transformation — Silver Layer
 
 Azure Databricks (PySpark) is used to clean and transform raw data
-
 Schema standardization, data type normalization, and basic cleansing applied
-
 Transformed data is stored in ADLS Gen2 (Silver layer) in Parquet format
+
+[![Azure-End-to-End-Pipeline](Silver__Layer.ipynb)
 
 3️⃣ Analytics & Serving — Gold Layer
 
 Azure Synapse Serverless SQL is used to create curated analytical views
-
 Views are built using OPENROWSET over Parquet files
-
 No dedicated SQL infrastructure required
-
 Gold views are optimized for BI tools and ad-hoc analysis
+
+[![Azure-End-to-End-Pipeline](Create_Views_gold.sql)
 
 4️⃣ Curated Storage (Optional Materialization)
 
 Gold views are also materialized as external tables in ADLS Gen2
 
 Enables reuse and structured access for downstream consumers
+
+[![Azure-End-to-End-Pipeline](Creating_Ext_tables.sql)
 
 5️⃣ Security & Access
 
@@ -129,6 +132,8 @@ Dataset is **not re-uploaded** in this repository to respect ownership.
 Special thanks to **Ansh Lamba** for the tutorial guidance.
 
 ---
+
+## This project reflects my journey as a Data Analyst expanding into a Data Professional role, focusing on both analytical outcomes and scalable cloud data engineering practices.
 
 ## 🤝 Connect With Me
 
