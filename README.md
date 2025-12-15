@@ -1,12 +1,19 @@
 # Azure End-to-End-Data Pipeline Project
  A cloud-based data engineering + analytics workflow using ADLS Gen2, ADF, Databricks, Azure SQL, and Power BI.
 
-## 🚀 Project Overview
+## Project Summary
 
-This project demonstrates a complete end-to-end data pipeline built on **Microsoft Azure**, using **Azure Data Lake Storage Gen2 (ADLS Gen2)** as the main data layer and following a **Bronze → Silver → Gold architecture**.
+This project showcases an end-to-end cloud data pipeline on Microsoft Azure, built from a data analyst’s perspective with strong engineering fundamentals.
 
-Using **Azure Data Factory (ADF)** for orchestration and **Azure Databricks** for transformations, the data moves through multiple quality stages before being loaded into **Azure SQL Database**.  
-Finally, **Power BI** is used to visualize insights from the curated Gold dataset.
+The pipeline ingests raw data, transforms it into analytics-ready datasets using Azure Databricks, and exposes curated Gold-layer views through Azure Synapse Serverless SQL for downstream analysis and reporting.
+
+## Why This Project
+
+As a Data Analyst transitioning into a broader Data Professional role, this project demonstrates:
+
+Ownership of the entire data lifecycle
+Strong understanding of cloud analytics architecture
+Ability to bridge business analytics and data engineering
 
 This project was created as part of my Azure learning journey while preparing for **DP-900 (Azure Data Fundamentals)**.
 
@@ -18,55 +25,84 @@ This project was created as part of my Azure learning journey while preparing fo
 
 **This architecture follows the Azure Medallion pattern (Bronze → Silver → Gold) using ADF for ingestion, Databricks for transformation, and Power BI for reporting.**
 ---
-## 🔧 Technologies Used
 
-- Azure Data Lake Storage Gen2 (ADLS Gen2)  
-- Azure Data Factory (ADF)  
-- Azure Databricks (PySpark)  
-- Bronze/Silver/Gold architecture  
-- Azure SQL Database  
-- Power BI  
+## End-to-End Data Flow
+1️⃣ Data Ingestion — Bronze Layer
 
----
+Source data (AdventureWorks datasets) is ingested using Azure Data Factory
 
-## 🔄 Pipeline Workflow
+Pipelines are parameterized to handle multiple datasets
 
-### **1️⃣ Bronze Layer — Raw Data**
-- Raw files stored in ADLS Gen2  
-- ADF triggers processing  
-- Data kept unchanged for lineage  
+Raw data is stored in Azure Data Lake Storage Gen2 (Bronze layer) without modification
 
-### **2️⃣ Silver Layer — Cleaned Data**
-- Data cleaning in Databricks  
-- Null handling, type casting, filtering  
-- Stored in ADLS Silver folder  
+2️⃣ Data Transformation — Silver Layer
 
-### **3️⃣ Gold Layer — Analytics-Ready**
-- Business transformations  
-- Aggregated tables  
-- Stored in ADLS Gold folder  
+Azure Databricks (PySpark) is used to clean and transform raw data
 
-### **4️⃣ Azure SQL Database**
-- Gold tables loaded into SQL  
-- Ready for analytics  
+Schema standardization, data type normalization, and basic cleansing applied
 
-### **5️⃣ Power BI Dashboard**
-- Direct connection to Azure SQL  
-- KPIs and visuals created  
+Transformed data is stored in ADLS Gen2 (Silver layer) in Parquet format
 
----
+3️⃣ Analytics & Serving — Gold Layer
 
-## 📸 Screenshots
+Azure Synapse Serverless SQL is used to create curated analytical views
 
-Screenshots include:
+Views are built using OPENROWSET over Parquet files
 
-- ADLS folder structure  
-- ADF pipeline  
-- Databricks notebook  
-- SQL tables  
-- Power BI report  
+No dedicated SQL infrastructure required
 
-(Stored in `/screenshots`)
+Gold views are optimized for BI tools and ad-hoc analysis
+
+4️⃣ Curated Storage (Optional Materialization)
+
+Gold views are also materialized as external tables in ADLS Gen2
+
+Enables reuse and structured access for downstream consumers
+
+5️⃣ Security & Access
+
+Secure access via Azure Managed Identity
+
+Storage access controlled using Azure RBAC
+
+No secrets or keys stored in code
+
+⚙️ Technologies Used
+
+Azure Data Factory
+
+Azure Data Lake Storage Gen2
+
+Azure Databricks (PySpark)
+
+Azure Synapse Analytics (Serverless SQL)
+
+Parquet
+
+Azure Managed Identity
+
+GitHub
+
+🧠 Key Learnings
+
+Implemented Medallion Architecture in Azure
+
+Built analytics pipelines using serverless compute
+
+Understood IAM vs SQL permissions in Synapse
+
+Designed data models with analytics consumption in mind
+
+🚀 Future Enhancements
+
+Power BI dashboards on Gold views
+
+Incremental ingestion and processing
+
+Data quality validations
+
+CI/CD for pipelines and notebooks
+
 
 ---
 
