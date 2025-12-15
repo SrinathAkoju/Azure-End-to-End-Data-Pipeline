@@ -61,11 +61,8 @@ Enables reuse and structured access for downstream consumers
 
 5️⃣ Security & Access
 
-Secure access via Azure Managed Identity
-
-Storage access controlled using Azure RBAC
-
-No secrets or keys stored in code
+Data access between Azure Databricks, Synapse, and ADLS Gen2 is secured using Azure Managed Identity and RBAC.
+Authentication details are intentionally omitted from code to follow security best practices.
 
 ⚙️ Technologies Used
 
